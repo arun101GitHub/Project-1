@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class CurrentDirectoryPath {
-	public static void findDirectory() {
+	public void findDirectory() {
         try {
             String canonicalPath = new File(".").getCanonicalPath();
             System.out.println("Current directory path using canonical path method :- " + canonicalPath);

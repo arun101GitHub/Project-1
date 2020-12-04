@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 
 public class TestDelete {
 
-	public static void delete() {
+	public void delete() {
 		try {
 			Files.delete(Paths.get("file2"));
 		} catch (NoSuchFileException e) {

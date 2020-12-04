@@ -3,6 +3,8 @@ package com.simplilearn.workshop;
 import java.io.IOException;
 import java.util.Scanner;
 
+import javax.swing.JFrame;
+
 public class Project1Test {
 	private static void displayChoiceMessage() {
 		System.out.println("Enter Choice A for Add a file to existing directory");
@@ -18,7 +20,7 @@ public class Project1Test {
 	}
 
 	private static void displayOptionMessage() {
-		System.out.println("Enter Option Number 1 for return current files & directory");
+		System.out.println("\nEnter Option Number 1 for return current files & directory");
 		System.out.println("Enter Option Number 2 for Multiple Selections");
 		System.out.println("Enter Option Number 3 for close application");
 	}
@@ -31,7 +33,7 @@ public class Project1Test {
 		
 		displayOptionMessage();
 		
-		CurrentDirectoryPath Directory = new CurrentDirectoryPath();
+		CurrentDirectoryPath DirPath = new CurrentDirectoryPath();
 		CreateNewFile Add = new CreateNewFile();
 		TestDelete Delete = new TestDelete();
 		SearchFile search = new SearchFile();
@@ -42,7 +44,7 @@ public class Project1Test {
 		switch (option)
 		{
 		case 1:
-			CurrentDirectoryPath.findDirectory();
+			DirPath.findDirectory();
 			break;
 		case 2:
 			displayChoiceMessage();
@@ -69,12 +71,28 @@ public class Project1Test {
 				search.Search();
 			}
 			break; 
-		}
+		default: 
+		{// user did enter valid selection
+		System.out.println("\n Your did not enter a valid selection. Try again");	
+
+	     }
+		break;
+			}
 		case 3:
-			// close application
-			System.exit (0);
-		}
+		    { // close application
+		    	
+		    	System.out.println("terminating or closing java program");
+		        System.exit(1); //non zero value to exit says abnormal termination of JVM
+		    }
+			break;
+		
+		default: 
+		{// user did enter valid selection
+		System.out.println("\n Your did not enter a valid selection. Try again");	
 
+	     }
+		break;
+		
+       }
 	}
-
 }

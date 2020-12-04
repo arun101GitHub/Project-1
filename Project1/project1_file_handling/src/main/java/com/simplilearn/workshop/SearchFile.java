@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class SearchFile {
-	public static void Search() throws IOException {
+	public void Search() throws IOException {
 	 System.out.println("Enter the path to folder to search for files");
      Scanner s1 = new Scanner(System.in);
      String folderPath = s1.next();

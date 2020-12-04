@@ -21,7 +21,7 @@ public class CreateNewFile {
 
 	} */
 
-	static void createFileIn_NIO() throws IOException {
+	void createFileIn_NIO() throws IOException {
 		String data = "Learning Java is Fun !";
 		Files.write(Paths.get("testfile3.txt"), data.getBytes());
 		
@@ -30,14 +30,14 @@ public class CreateNewFile {
 		
 	}
 
-	static void createFileUsingFileOutputStreamClass() throws IOException {
+	void createFileUsingFileOutputStreamClass() throws IOException {
 		String data = "Project 1 - Welcome to Java Programming!";
 		FileOutputStream output = new FileOutputStream("testfile2.txt");
 		output.write(data.getBytes());
 		output.close();
 	}
 
-	static void createFileUsingFileClass() throws IOException {
+	void createFileUsingFileClass() throws IOException {
 		File file = new File("testfile1.txt");
 		
 		// create the file name testfile1.txt
